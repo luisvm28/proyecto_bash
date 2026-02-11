@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Servidor</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 30px; }
+        .timestamp { color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px; }
+        
+        table { width: 100%; border-collapse: collapse; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        /* Requerimiento: Columna (header) verde claro */
+        th { background-color: #90EE90; color: #000; border: 1px solid #ccc; padding: 10px; text-align: left; }
+        
+        /* Requerimiento: Resto de campos en blanco */
+        td { background-color: #ffffff; border: 1px solid #ccc; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Estado del Servidor</h1>
+    <div class="timestamp">Generado el: 2026-02-10 19:41:42</div>
+    <h2>Métricas Generales</h2>
+    <table>
+        <tr><th>Métrica</th><th>Valor Actual</th></tr>
+        <tr><td>Tiempo encendido</td><td>up 50 minutes</td></tr>
+        <tr><td>Carga de CPU (avg)</td><td> 0.00, 0.00, 0.00</td></tr>
+        <tr><td>Memoria Libre</td><td>14Gi</td></tr>
+        <tr><td>Uso de Disco (raíz)</td><td>1%</td></tr>
+    </table>
+    <h2>Top 10 Procesos (Mayor consumo CPU)</h2>
+    <table>
+        <tr>
+            <th>PID</th>
+            <th>Usuario</th>
+            <th>% CPU</th>
+            <th>Comando</th>
+        </tr>
+<tr><td>1</td><td>root</td><td>0.0</td><td>systemd</td></tr>
+<tr><td>40</td><td>root</td><td>0.0</td><td>systemd-journal</td></tr>
+<tr><td>186</td><td>message+</td><td>0.0</td><td>dbus-daemon</td></tr>
+<tr><td>202</td><td>root</td><td>0.0</td><td>wsl-pro-service</td></tr>
+<tr><td>91</td><td>root</td><td>0.0</td><td>systemd-udevd</td></tr>
+<tr><td>1323</td><td>polkitd</td><td>0.0</td><td>polkitd</td></tr>
+<tr><td>199</td><td>root</td><td>0.0</td><td>systemd-logind</td></tr>
+<tr><td>222</td><td>syslog</td><td>0.0</td><td>rsyslogd</td></tr>
+<tr><td>106</td><td>systemd+</td><td>0.0</td><td>systemd-timesyn</td></tr>
+<tr><td>234</td><td>root</td><td>0.0</td><td>unattended-upgr</td></tr>
+    </table>
+    <h2>Top 10 Archivos más grandes en: /var</h2>
+    <table>
+        <tr>
+            <th>Tamaño</th>
+            <th>Fecha</th>
+            <th>Ruta del Archivo</th>
+        </tr>
+<tr><td>70M</td><td>2024-04-25 05:56</td><td>/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_noble_universe_binary-amd64_Packages</td></tr>
+<tr><td>59M</td><td>2026-02-10 19:06</td><td>/var/cache/apt/srcpkgcache.bin</td></tr>
+<tr><td>59M</td><td>2026-02-10 19:06</td><td>/var/cache/apt/pkgcache.bin</td></tr>
+<tr><td>31M</td><td>2024-04-25 05:02</td><td>/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_noble_universe_i18n_Translation-en</td></tr>
+<tr><td>15M</td><td>2026-02-09 05:07</td><td>/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_restricted_binary-amd64_Packages</td></tr>
+<tr><td>15M</td><td>2026-02-09 03:47</td><td>/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_noble-security_restricted_binary-amd64_Packages</td></tr>
+<tr><td>11M</td><td>2026-02-09 05:07</td><td>/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_restricted_i18n_Translation-en</td></tr>
+<tr><td>11M</td><td>2026-02-09 03:47</td><td>/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_noble-security_restricted_i18n_Translation-en</td></tr>
+<tr><td>9.3M</td><td>2026-02-10 08:15</td><td>/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_main_binary-amd64_Packages</td></tr>
+<tr><td>9.2M</td><td>2026-02-09 05:07</td><td>/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_universe_binary-amd64_Packages</td></tr>
+    </table>
+</body>
+</html>
